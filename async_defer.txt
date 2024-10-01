@@ -1,0 +1,11 @@
+In normal script tag,
+<script>  ->
+The HTML file will be parsed until the script file is hit, at that point parsing will stop and a request will be made to fetch the file.
+The script then gets executed before parsing is resumed.
+
+<script async>  ->
+async downloads the file during HTML parsing and will pause the HTML parser to execute it when it has finished downloading.
+
+<script defer>  ->
+defer downloads the file during HTML parsing and will only execute it after the parser has completed.
+defer scripts are also guranteed to execute in the order they appear in the document.
